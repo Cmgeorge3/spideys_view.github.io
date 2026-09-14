@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Photo Service Form</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+  <style>
+
+    body {
+      font-family: 'Bangers', "Comic Sans MS", Sans serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* Holds the form and image side-by-side */
+    .page-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Form section */
+    .form-container {
+      flex: 1;
+    }
+
+    /* Image section */
+    .image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .right-image {
+      width: 100%;
+      max-width: 950px;
+      height: 650px;
+      object-fit: fill;
+      border: 2px solid black;
+    }
+
+    /* Submit button */
+    button {
+      transition: background-color 1s ease;
+      color: black;
+      background-color: gray;
+      padding: 10px 20px;
+      border: 5px solid black;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: cyan;
+    }
+
+    /* Makes the page work better on phones */
+    @media (max-width: 800px) {
+      .page-container {
+        flex-direction: column;
+      }
+
+      .image-container {
+        width: 100%;
+      }
+
+      .right-image {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-container">
+
+    <!-- FORM ON THE LEFT -->
+    <div class="form-container">
+
+      <form action="https://formspree.io/f/xkjnlybg" method="POST">
+
+        <table border="3">
+          <tr>
+            <th>Job Type</th>
+            <th>Price $ per Task</th>
+          </tr>
+
+          <tr>
+            <td>Full body/ Landscape (3)</td>
+            <td>$8 </td>
+          </tr>
+
+          <tr>
+            <td>Head-Shots(5)</td>
+            <td>$15</td>
+          </tr>
+          <tr>
+            <td>Group-Photos(10)</td>
+            <td>$20</td>
+          </tr>
+
+        </table>
+
+        <b><h2>Please contact me by phone to confirm a day for your Photo-Op: (252)-499-0867</h2></b>
+
+       
+
+        <b>
+          <label for="jobType">Choose Job Type:</label>
+          <select id="jobType" name="jobType" required>
+            <option value="">-- Select a Job --</option>
+            <option value="full-body">full-body</option>
+            <option value="Headshot">Headshot</option>
+            <option value="Group">Group</option>
+
+          </select>
+        </b>
+
+        <br><br>
+
+        <b>
+          <label for="serviceTypes">
+            Choose Mobile or Local Services:
+          </label>
+
+          <select id="serviceTypes" name="serviceTypes" required>
+            <option value="">-- Select Service Type --</option>
+            <option value="Come To me">Come To me</option>
+            <option value="Come to you">
+              Come to you
+            </option>
+          </select>
+        </b>
+
+       
+        <br><br>
+
+        <b>
+          <label for="address">
+            Address of Venue:
+          </label>
+
+          <input
+            type="text"
+            id="address"
+            name="address"
+            required
+          >
+        </b>
+
+        <br><br>
+
+        <b>
+          <label for="email">
+            Your Email:
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
+        </b>
+
+        <br><br>
+
+        <b>
+          <label for="phone">
+            Your Phone Number:
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+          >
+        </b>
+
+        <br><br>
+
+        <b>
+          <button type="submit">
+            Submit Form
+          </button>
+        </b>
+
+      </form>
+
+    </div>
+
+
+    <!-- IMAGE ON THE RIGHT -->
+    <div class="image-container">
+
+      <img
+        src="form_img1.png"
+        alt="Spidey Service"
+        class="right-image"
+      >
+
+    </div>
+
+  </div>
+
+</body>
+</html>
